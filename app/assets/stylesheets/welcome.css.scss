@@ -1,0 +1,48 @@
+@mixin cover-block{
+	background-size: cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	height: 600px;
+	h1,h2,h3,h4,h5,h6,p,span{
+		margin: 0px;
+	}
+}
+@mixin white-color{
+	h1,h2,h3,h4,h5,h6,p,span{
+		color:white;
+	}
+}
+.cover{
+	@include cover-block;
+	background: image-url("jeffrey_main_cover.jpg") no-repeat fixed;
+	@include white-color;
+}
+.cv{
+	@include cover-block;
+	background-color: #fbb03a;
+	h3,p{
+		margin-top: 0px;
+		color: black;
+	}
+}
+.project{
+	@include cover-block;
+	background: image-url("jeffrey_main_cover.jpg") no-repeat fixed;
+	@include white-color;
+}
+.coding{
+	@include cover-block;
+	background: image-url("jeffrey_main_cover.jpg") no-repeat fixed;
+	@include white-color;
+}
+.travel-experience{
+	@include cover-block;
+	background: image-url("jeffrey_main_cover.jpg") no-repeat fixed;
+	@include white-color;
+
+}
+.contact{
+	background-color: black;
+	@include cover-block;
+	@include white-color;
+}
