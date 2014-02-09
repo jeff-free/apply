@@ -61,8 +61,6 @@ Apply::Application.configure do
   #Enable modernizr.js
   config.assets.precompile += %w( vendor/modernizr.js )
 
-  config.assets.initialize_on_precompile = false
-
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
