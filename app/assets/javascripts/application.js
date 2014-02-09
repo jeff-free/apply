@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require_tree .
-
+//= require jquery.superscrollorama
+//= require TweenMax.min
 $(function(){ 
 	$(document).foundation();
  });

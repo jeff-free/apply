@@ -17,7 +17,60 @@
     <%= yield %>
     <script type="text/javascript">
     $(document).ready(function(){
-        $.stellar();
+      var controller = $.superscrollorama({
+            triggerAtCenter: false,
+            playoutAnimations: true
+          });
+      // controller.addTween('#fade',TweenMax.from($('#fade'), .5, {css:{opacity:0}}));
+      controller.pin($('.cv'), 1300, {
+          anim: (new TimelineLite())
+            .append(
+              TweenMax.fromTo($('#fade'), 1, 
+                {css:{left: 200, top:-750}, immediateRender:true}, 
+                {css:{left:200, top: 0}}),
+              -10
+            )
+            .append(
+              TweenMax.fromTo($('#cv-arrow'), 2, 
+                {css:{left: -1280, top:300}, immediateRender:true}, 
+                {css:{left:0, top: 300}}),
+              -9
+            )
+            .append(
+              TweenMax.fromTo($('#09'),2,{css:{top:-100,opacity:0},immediateRender:true},{css:{opacity:1}})
+              )
+            .append(
+              TweenMax.fromTo($('#10'),2,{css:{top:-100,opacity:0},immediateRender:true},{css:{opacity:1}})
+              )
+            .append(
+              TweenMax.fromTo($('#11'),2,{css:{top:-100,opacity:0},immediateRender:true},{css:{opacity:1}})
+              )
+            .append(
+              TweenMax.fromTo($('#12'),2,{css:{top:-100,opacity:0},immediateRender:true},{css:{opacity:1}})
+              )
+            .append(
+              TweenMax.fromTo($('#13'),2,{css:{top:-100,opacity:0},immediateRender:true},{css:{opacity:1}})
+              )
+            .append(
+              TweenMax.fromTo($('#goes_on'),2,{css:{top:-100,opacity:0},immediateRender:true},{css:{opacity:1}})
+              )
+            // .append(
+            //   controller.addTween('#09', TweenMax.from( $('#09'), .5, {css:{opacity: 0}}));
+            // )
+            // .append(
+            //   TweenMax.to($('#cv-arrow'), .5, 
+            //     {css:{left: 200}})
+            // )
+        });
+        // $.stellar();
+        // $(window).scroll(function(){
+        //   $('#test').each(function(){
+        //     var imagePos=$(this).offset().top;
+        //     var topOfWindow=$(window).scrollTop();
+        //     if (imagePos<topOfWindow+300){
+        //       $(this).addClass('slideRight');}
+        //   })
+        // })
     })
     </script>
   </body>

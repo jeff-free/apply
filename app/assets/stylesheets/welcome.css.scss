@@ -1,8 +1,7 @@
+@import 'foundation_and_overrides';
 @mixin cover-block{
-	background-size: cover;
-	-webkit-background-size:cover;
-	-moz-background-size:cover;
-	height: 600px;
+	background-size: 100% !important;
+	height: 650px;
 	h1,h2,h3,h4,h5,h6,p,span{
 		margin: 0px;
 	}
@@ -14,20 +13,34 @@
 }
 .cover{
 	@include cover-block;
-	background: image-url("jeffrey_main_cover.jpg") no-repeat fixed;
+	background: image-url("jeffrey_main_cover.jpg");
 	@include white-color;
+	h1{
+		float: right;
+	}
 }
 .cv{
 	@include cover-block;
+	width: 100%;
 	background-color: #fbb03a;
+	img{
+		position: relative;
+	}
+	h1{
+		color: white;
+		position: relative;
+	}
 	h3,p{
 		margin-top: 0px;
 		color: black;
 	}
+	.year{
+		position: relative;
+	}
 }
 .project{
 	@include cover-block;
-	background: image-url("jeffrey_main_cover.jpg") no-repeat fixed;
+	background: image-url("jeffrey_at_demoday.png") no-repeat fixed;
 	@include white-color;
 }
 .coding{
@@ -37,7 +50,7 @@
 }
 .travel-experience{
 	@include cover-block;
-	background: image-url("jeffrey_main_cover.jpg") no-repeat fixed;
+	background: image-url("71650008.jpg") no-repeat fixed;
 	@include white-color;
 
 }
