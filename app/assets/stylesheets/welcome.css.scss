@@ -11,12 +11,22 @@
 		color:white;
 	}
 }
+body{
+	background: black;
+}
 .cover{
 	@include cover-block;
 	background: image-url("jeffrey_main_cover.jpg");
 	@include white-color;
+	padding-top: 3em;
+	text-align: right;
 	h1{
-		float: right;
+		color: #fbb03a;
+	}
+	h6{
+		margin-top: 2em;
+		text-indent: 2em;
+		text-align: left;
 	}
 }
 .cv{
@@ -35,18 +45,71 @@
 		color: black;
 	}
 	.year{
+		padding: 5px 2px;
 		position: relative;
+		min-height: 200px;
+		ul{
+			background-color: rgba(255,255,255,0.9);
+			width: 100%;
+			border-radius: 5px;
+			min-height: 200px;
+			padding: 1em 1.2em;
+			margin: 0;
+		}	
+		#goes_on{
+			height: 200px;
+			h3{
+				position: absolute;
+				top: 50%;
+			    /*margin: -15% 0 0 -25%;*/
+			}
+		}
 	}
 }
 .project{
 	@include cover-block;
-	background: image-url("jeffrey_at_demoday.png") no-repeat fixed;
+	background: image-url("jeffrey_at_demoday.jpg") no-repeat fixed;
 	@include white-color;
+	.project-title{
+		@include grid-column(
+			$columns:10,
+			$pull:2,
+			$float:right
+		);
+		margin: 2em 0;
+	}
+	.project-intro{
+		@include grid-column(
+			$columns:5,
+			$pull:2,
+			$float:right
+		);
+	}
 }
 .coding{
 	@include cover-block;
-	background: image-url("jeffrey_main_cover.jpg") no-repeat fixed;
+	width: 100%;
+	background: image-url("coding_background.png") no-repeat fixed;
+  	filter: blur(5px);
 	@include white-color;
+	#coding-intro{
+		@include grid-column(
+			$columns:8
+			);
+		margin: 2em 0;
+		text-indent: 2em;
+	}
+	#octocard{
+		@include grid-column(
+			$columns:4,
+			$float:right
+		);
+		margin: 2em 0;
+	}
+	.portofolio{
+		@include grid-column(
+			$columns:3);
+	}
 }
 .travel-experience{
 	@include cover-block;

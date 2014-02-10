@@ -15,6 +15,8 @@
 //= require foundation
 //= require jquery.superscrollorama
 //= require TweenMax.min
+//= require welcome
+
 $(function(){ 
 	$(document).foundation();
  });
