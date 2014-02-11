@@ -9,13 +9,14 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application" %>
+    <script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
 
     <%= yield %>
-    <script type="text/javascript">
+    <script>
     $(document).ready(function(){
       var controller = $.superscrollorama({
             triggerAtCenter: false,
@@ -62,7 +63,7 @@
               TweenMax.fromTo($('.portofolio'),0.5,{css:{opacity:0}, immediateRender:true}, 
                 {css:{opacity:1}},1))
           })
-          })
+        });
     </script>
     <script>
       OCTOCARD = {
@@ -71,18 +72,50 @@
       reposIgnored: 'reponame1,reponame2',};
     </script>
     <script>
-      $(window).scroll(function() {
-        $('.portofolio').each(function(){
-        var imagePos = $(this).offset().top;
-
-        var topOfWindow = $(window).scrollTop();
-          if (imagePos < topOfWindow+400) {
-            $(this).addClass("pulse");
-          }
-        });
+      $(document).foundation({
+        orbit: {
+          animation: 'slide', // Sets the type of animation used for transitioning between slides, can also be 'fade'
+                timer_speed: 10000
+                pause_on_hover: false,
+                resume_on_mouseout: false,
+                animation_speed: 300,
+                stack_on_small: false,
+                navigation_arrows: true,
+                slide_number: false,
+                slide_number_text: 'of',
+                container_class: 'orbit-container',
+                stack_on_small_class: 'orbit-stack-on-small',
+                next_class: 'orbit-next',
+                prev_class: 'orbit-prev',
+                timer_container_class: 'orbit-timer',
+                timer_paused_class: 'paused',
+                timer_progress_class: 'orbit-progress',
+                slides_container_class: 'orbit-slides-container',
+                bullets_container_class: 'orbit-bullets',
+                slide_selector: 'li',
+                bullets_active_class: 'active',
+                slide_number_class: 'orbit-slide-number',
+                caption_class: 'orbit-caption',
+                active_slide_class: 'active',
+                orbit_transition_class: 'orbit-transitioning',
+                bullets: false,
+                circular: true,
+                timer: false, 
+                variable_height: false, // Does the slider have variable height content?
+                swipe: true,
+                before_slide_change: noop, // Execute a function before the slide changes
+                after_slide_change: noop // Execute a function after the slide changes
+        }
       });
     </script>
+    <script src="http://nodejs.in/octocard/bin/octocard.js"></script>
+    <script type="text/javascript">
+      gapi.hangout.render('placeholder-div3', {
+        'render': 'createhangout',
+        'hangout_type': 'normal',
+        'initial_apps': [{'app_id' : '184219133185', 'start_data' : 'dQw4w9WgXcQ', 'app_type' : 'ROOM_APP' }],
+        'widget_size': 175
+      });
     </script>
-<script src="http://nodejs.in/octocard/bin/octocard.js"></script>
   </body>
 </html>

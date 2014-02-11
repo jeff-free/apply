@@ -2,12 +2,13 @@
 @mixin cover-block{
 	background-size: 100% !important;
 	height: 650px;
-	h1,h2,h3,h4,h5,h6,p,span{
+	h1,h2,h3,h4,h5,h6,p,span,i{
 		margin: 0px;
 	}
 }
 @mixin white-color{
-	h1,h2,h3,h4,h5,h6,p,span{
+	color: white;
+	h1,h2,h3,h4,h5,h6,p,span,i{
 		color:white;
 	}
 }
@@ -21,18 +22,27 @@ body{
 	padding-top: 3em;
 	text-align: right;
 	h1{
-		color: #fbb03a;
+		color: #f39c12;
 	}
 	h6{
 		margin-top: 2em;
 		text-indent: 2em;
 		text-align: left;
 	}
+	#features{
+		@include grid-column(
+			$columns:4,
+			$push:8);
+		margin-top: 2em;
+		background:#f39c12;
+		border-radius: 5px;
+		text-align: left;
+	}
 }
 .cv{
 	@include cover-block;
 	width: 100%;
-	background-color: #fbb03a;
+	background-color: #f39c12;
 	img{
 		position: relative;
 	}
@@ -72,18 +82,27 @@ body{
 	@include white-color;
 	.project-title{
 		@include grid-column(
-			$columns:10,
-			$pull:2,
-			$float:right
+			$columns:6,
+			$push:5
 		);
-		margin: 2em 0;
+		margin: 1em 0;
+		text-align: right;
 	}
 	.project-intro{
 		@include grid-column(
-			$columns:5,
-			$pull:2,
+			$columns:6,
+			$pull:1,
 			$float:right
 		);
+		background: rgba(51, 51, 51, 0.8);
+		text-indent: 2em;
+		padding: 1em;
+	}
+	.orbit-slider{
+		background: rgba(255,255,255,0.5);
+		.orbit-caption{
+			padding: 0 1em;
+		}
 	}
 }
 .coding{
@@ -119,6 +138,53 @@ body{
 }
 .contact{
 	background-color: black;
-	@include cover-block;
+	height: 600px;
 	@include white-color;
+	.contact-title{
+		@include grid-column();
+	}
+	.about-me-intergration{
+		@include grid-column(
+			$columns:8
+		);
+	}
+	.contact-method{
+		@include grid-column(
+			$columns:4);
+		margin-top: 10px;
+		.email-me-button{
+			@include button(
+				$bg:#f39c12,
+				$radius:true
+				);
+			padding: 5px 7px;
+			&:hover{
+				box-shadow:inset 0 -2px 0 rgba(0,0,0,0.27);
+			};
+		}
+		.phone-number{
+			@include button(
+				$radius:true
+				);
+			padding: 5px 7px;
+			&:hover{
+				box-shadow:inset 0 -2px 0 rgba(0,0,0,0.27);
+			};
+		}
+	}
+	.blockquote{
+		@include grid-row();
+		margin-top: 10em;
+		h1, i{
+			text-align: center;
+			color: rgba(150,150,150,1)!important;
+			vertical-align: top;
+		};
+		i{
+
+			font-size:0.5em;
+			margin-bottom: 20px;
+		}
+		
+	}
 }
