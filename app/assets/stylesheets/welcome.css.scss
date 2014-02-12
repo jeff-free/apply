@@ -1,11 +1,15 @@
 @import 'foundation_and_overrides';
 @mixin cover-block{
-	background-size: 100% !important;
+	background-size: cover !important;
 	height: 650px;
 	h1,h2,h3,h4,h5,h6,p,span,i{
 		margin: 0px;
 	}
 }
+@mixin mobile-block{
+	background-size: auto!important;
+	background-position:35% 25% !important;
+};
 @mixin white-color{
 	color: white;
 	h1,h2,h3,h4,h5,h6,p,span,i{
@@ -16,10 +20,14 @@ body{
 	background: black;
 }
 .cover{
-	@include cover-block;
+	@media #{$medium-up}{
+		@include cover-block;
+		padding-top: 3em;
+	};
+	padding-top:1em;
+	@include mobile-block;
 	background: image-url("jeffrey_main_cover.jpg");
 	@include white-color;
-	padding-top: 3em;
 	text-align: right;
 	h1{
 		color: #f39c12;
@@ -29,14 +37,40 @@ body{
 		text-indent: 2em;
 		text-align: left;
 	}
+	#cover-title{
+		@media #{$medium-up}{
+			@include grid-column(
+				$columns:7,
+				$float:right
+				)
+		};
+		@include grid-column(12);
+	}
 	#features{
-		@include grid-column(
+		@media #{$medium-up}{
+			@include grid-column(
 			$columns:4,
 			$push:8);
-		margin-top: 2em;
+			ul{
+				margin-bottom: 1.25em !important;
+			};
+		};
+		@media #{$small-only}{
+			@include grid-column(
+				$columns:12,
+				$center:true);
+			margin-top:75%;
+			left:auto;
+			padding:0 auto;
+		ul{
+			margin-bottom: 0;
+		}
+		}
+		
+		/*margin-top: 2em;
 		background:#f39c12;
 		border-radius: 5px;
-		text-align: left;
+		text-align: left;*/
 	}
 }
 .cv{
@@ -76,24 +110,68 @@ body{
 		}
 	}
 }
+.cv-small{
+	width: 100%;
+	background-color: #f39c12;
+	img{
+		position: relative;
+	}
+	h1{
+		color: white;
+		position: relative;
+	}
+	h3,p{
+		margin-top: 0px;
+		color: black;
+	}
+	.year{
+		padding: 5px 2px;
+		position: relative;
+		ul{
+			background-color: rgba(255,255,255,0.9);
+			width: 100%;
+			border-radius: 5px;
+			padding: 1em 1.2em;
+			margin: 0;
+		}
+	}
+}
 .project{
-	@include cover-block;
-	background: image-url("jeffrey_at_demoday.jpg") no-repeat fixed;
+	@media #{$medium-up}{
+		@include cover-block;
+		background: image-url("jeffrey_at_demoday.jpg") no-repeat fixed;
+	};
+	background: image-url("jeffrey_at_demoday.jpg");
+	@include mobile-block;
 	@include white-color;
 	.project-title{
 		@include grid-column(
-			$columns:6,
-			$push:5
+			$columns:12
 		);
+		padding: 0;
+		@media #{$medium-up}{
+			@include grid-column(
+				$columns:6,
+				$push:5
+			);
+			text-align: right;
+		}
+		left:0px;
 		margin: 1em 0;
-		text-align: right;
+		text-align:center;
 	}
 	.project-intro{
 		@include grid-column(
-			$columns:6,
-			$pull:1,
-			$float:right
+			$columns:12
 		);
+		@media #{$medium-up}{
+			@include grid-column(
+				$columns:6,
+				$pull:1,
+				$float:right
+			);	
+		}
+		right:0;
 		background: rgba(51, 51, 51, 0.8);
 		text-indent: 2em;
 		padding: 1em;
@@ -106,34 +184,53 @@ body{
 	}
 }
 .coding{
-	@include cover-block;
-	width: 100%;
-	background: image-url("coding_background.png") no-repeat fixed;
-  	filter: blur(5px);
+	@media #{$medium-up}{
+		@include cover-block;
+		background: image-url("coding_background.png") no-repeat fixed;
+	};
+	@media #{$small-only}{
+		@include mobile-block;
+		height: 100%;
+		background: image-url("coding_background.png");
+	}
 	@include white-color;
 	#coding-intro{
-		@include grid-column(
-			$columns:8
-			);
+		@media #{$medium-up}{
+			@include grid-column(
+				$columns:8
+				);
+		}
+		@include grid-column(12);
 		margin: 2em 0;
 		text-indent: 2em;
 	}
 	#octocard{
-		@include grid-column(
-			$columns:4,
-			$float:right
-		);
+		@media #{$medium-up}{
+			@include grid-column(4);
+		}
+		@include grid-column(12);
 		margin: 2em 0;
 	}
 	.portofolio{
-		@include grid-column(
-			$columns:3);
-	}
+		@media #{$medium-up}{
+			@include grid-column(
+			$columns:6,
+			$push:1);
+		};
+		@include grid-column(12)};
 }
 .travel-experience{
 	@include cover-block;
 	background: image-url("71650008.jpg") no-repeat fixed;
 	@include white-color;
+	#wanderworld-embed{
+		@include grid-row();
+		iframe{
+			width: 100%;
+			min-height: 550px;
+			height: 100%;
+		}
+	}
 
 }
 .contact{
@@ -144,14 +241,22 @@ body{
 		@include grid-column();
 	}
 	.about-me-intergration{
-		@include grid-column(
-			$columns:8
-		);
-	}
+		@include grid-column(12);
+		@media #{$medium-up}{
+			@include grid-column(8);
+		}
+	};
 	.contact-method{
-		@include grid-column(
-			$columns:4);
+		@include grid-column(12);
+		@media #{$medium-up}{
+			@include grid-column(4)
+		};
 		margin-top: 10px;
+		@media #{$small-only}{
+			ul{
+				@include inline-list;
+			}
+		};
 		.email-me-button{
 			@include button(
 				$bg:#f39c12,

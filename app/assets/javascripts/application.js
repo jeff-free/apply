@@ -17,3 +17,4 @@
 //= require TweenMax.min
 //= require panoromio
 //= require welcome
+// $(function(){ $(document).foundation();});
