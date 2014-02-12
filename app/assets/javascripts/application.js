@@ -13,8 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require welcome
 //= require jquery.superscrollorama
 //= require TweenMax.min
-//= require panoromio
-//= require welcome
+
+
 // $(function(){ $(document).foundation();});

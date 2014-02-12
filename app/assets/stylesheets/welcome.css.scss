@@ -194,6 +194,7 @@ body{
 		height: 100%;
 		background: image-url("coding_background.png");
 	}
+	width:100%;
 	@include white-color;
 	#coding-intro{
 		@media #{$medium-up}{
