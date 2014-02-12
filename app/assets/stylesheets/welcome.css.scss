@@ -51,6 +51,7 @@ body{
 			@include grid-column(
 			$columns:4,
 			$push:8);
+			margin-top: 2em;
 			ul{
 				margin-bottom: 1.25em !important;
 			};
@@ -67,10 +68,10 @@ body{
 		}
 		}
 		
-		/*margin-top: 2em;
+		margin-bottom: 2em;
 		background:#f39c12;
 		border-radius: 5px;
-		text-align: left;*/
+		text-align: left;
 	}
 }
 .cv{
