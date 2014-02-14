@@ -237,14 +237,23 @@ body{
 		border-radius: 5px;
 	}
 	#wanderworld-embed{
-		@include grid-row();
-		iframe{
-			width: 100%;
-			min-height: 550px;
-			height: 100%;
+		@media #{$large-up}{
+				@include grid-row();
+				iframe{
+					width: 100%;
+					min-height: 550px;
+					height: 100%;
+				}
+			}
 		}
-	}
-
+		@include grid-column(
+			$columns:10,
+			$push:1);
+		iframe{
+					width: 100%;
+					min-height: 550px;
+					height: 100%;
+				}
 }
 .contact{
 	background-color: black;

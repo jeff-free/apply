@@ -23,87 +23,14 @@
 		</div>
 	</div>
 </div>
-<div class="cv show-for-medium-up">
-	<div class="row">
-		<h1 id="cv-title">經歷簡介</h1>
-	</div>
-	<img src="<%=asset_path('cv_arrow.png')%>" id='cv-arrow'>
-	<div class="columns">
-		<div id="09" class="large-2 columns year">
-			<h3>2009</h3>
-			<ul>
-				<li>青輔會98年⻘年國際參與⾏動計劃：港都的奇幻旅程—雪梨參訪計劃</li>
-				<li>⻘輔會98年校園志工推廣⼤大使：⾛唱環島—⼋八⾵災募款⾏動</li>
-			</ul>
-		</div>
-		<div id="10" class="large-2 columns year">
-			<h3>2010</h3>
-			<ul>
-				<li>ATCC商業個案競賽：晉級複賽（15強）</li>
-				<li>武漢大學康騰案例分析國際邀請賽：冠軍</li>
-				<li>「阿廣告⽩吧！」企業廣告影片大賽創辦團隊</li>
-			</ul>
-		</div>
-		<div id="11" class="large-2 columns year">
-			<h3>2011</h3>
-			<ul>
-				<li>青輔會100年⻘年國際參與⾏動計劃：The Big Venture—倫敦社會企業參訪計劃</li>
-				<li>新光盃次世代網路⻘年創業競賽亞軍</li>
-			</ul>
-		</div>
-		<div id="12" class="large-2 columns year">
-			<h3>2012</h3>
-			<ul>
-				<li>創辦「WanderWorld地球漫遊」旅⾏社群服務</li>
-			</ul>
-		</div>
-		<div id="13" class="large-2 columns year">
-			<h3>2013</h3>
-			<ul>
-				<li>海軍陸戰隊退伍</li>
-				<li>AppWorks 之初創投 7th 創業育成計劃</li>
-				<li>國立中山大學企業管理學系畢業</li>
-			</ul>
-		</div>
-		<div id="goes_on" class="large-2 columns year">
-			<h2>繼續前進！</h2>
-		</div>
-	</div>
+<div class="cv show-for-large-up">
+	<%=render :partial=>'cv_partial_large'%>
+</div>
+<div class="cv-small show-for-medium-only">
+	<%=render :partial=>'cv_partial_small_medium'%>
 </div>
 <div class="cv-small show-for-small-only">
-	<div class="row">
-		<h1 id="cv-title">經歷簡介</h1>
-	</div>
-	<div class="row">
-		<div id="09" class="large-2 columns year">
-			<h3>2009</h3>
-			<ul>
-				<li>青輔會98年⻘年國際參與⾏動計劃：港都的奇幻旅程—雪梨參訪計劃</li>
-				<li>⻘輔會98年校園志工推廣⼤大使：⾛唱環島—⼋八⾵災募款⾏動</li>
-			</ul>
-			<h3>2010</h3>
-			<ul>
-				<li>ATCC商業個案競賽：晉級複賽（15強）</li>
-				<li>武漢⼤學康騰案例分析國際邀請賽：冠軍</li>
-				<li>「阿廣告⽩吧！」企業廣告影片大賽創辦團隊</li>
-			</ul>
-			<h3>2011</h3>
-			<ul>
-				<li>青輔會100年⻘年國際參與⾏動計劃：The Big Venture—倫敦社會企業參訪計劃</li>
-				<li>新光盃次世代網路⻘年創業競賽亞軍</li>
-			</ul>
-			<h3>2012</h3>
-			<ul>
-				<li>創辦「WanderWorld地球漫遊」旅⾏社群服務</li>
-			</ul>
-			<h3>2013</h3>
-			<ul>
-				<li>海軍陸戰隊退伍</li>
-				<li>AppWorks 之初創投 7th 創業育成計劃</li>
-				<li>國立中山大學企業管理學系畢業</li>
-			</ul>
-		</div>
-	</div>
+	<%=render :partial=>'cv_partial_small_medium'%>
 </div>
 <div class="project">
 	<div class="row">
