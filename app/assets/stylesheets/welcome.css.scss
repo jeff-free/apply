@@ -240,23 +240,16 @@ body{
 		border-radius: 5px;
 	}
 	#wanderworld-embed{
-		@media #{$large-up}{
-				@include grid-row();
-				iframe{
-					width: 100%;
-					min-height: 550px;
-					height: 100%;
-				}
-			}
-		}
-		@include grid-column(
-			$columns:10,
-			$push:1);
+		@include grid-row();
 		iframe{
-					width: 100%;
-					min-height: 550px;
-					height: 100%;
-				}
+			width: 100%;
+			min-height: 550px;
+			height: 100%;
+		}
+		@media #{$medium-only}{
+			width: 90%;
+		}
+	}
 }
 .contact{
 	background-color: black;
