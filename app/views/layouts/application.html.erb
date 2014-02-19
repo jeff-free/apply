@@ -21,7 +21,7 @@
     <%= yield %>
     <script>
     $(document).ready(function(){
-      if (!isMobile.any()){
+      if (!isMobile.any()&&!isSmallerSizeWindow.smallerSizeWindow()){
         var controller = $.superscrollorama({
             triggerAtCenter: false,
             playoutAnimations: true

@@ -18,3 +18,13 @@ var isMobile = {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
+var isSmallerSizeWindow={
+    smallerSizeWindow:function(){
+        if ($(window).width()<1025){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }   
+}
