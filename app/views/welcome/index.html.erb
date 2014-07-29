@@ -125,11 +125,14 @@
 				<li><a href="mailto:jeffrey410469@gmail.com" target="blank" class="email-me-button"><i class="fa fa-envelope-o"></i>&nbsp; Email Me</a>
 				</li>
 				<li><span class="phone-number"><i class="fa fa-mobile fa-lg"></i>&nbsp;0975-978-343</span></li>
-				<li class="show-for-large-up"><div id="placeholder-div3"></div></li>
 			</ul>
 		</div>
 	</div>
 	<div class="blockquote">
 		<h1><i class="fa fa-quote-left"></i>STAY FOCUS, MOVE FAST, BREAK THINGS<i class="fa fa-quote-right"></i></h1>
 	</div>
+  <div class="set_language">
+    <%= link_to "中文", url_for(params.merge({lang: :zh})), class: "button", title: "中文" %>
+    <%= link_to "En", url_for(params.merge({lang: :en})), class: "button", title: "English"  %>
+  </div>
 </div>
