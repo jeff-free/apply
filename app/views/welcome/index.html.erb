@@ -1,93 +1,77 @@
 <div class="cover">
 	<div class="row">
 		<div id="cover-title">
-			<h1>你好，我是 JEFFREY</h1>
-			<h3>熱情、專注，以行動創造改變</h3>
+			<h1><%= t(:hello) %></h1>
+			<h3><%= t(:slogan) %></h3>
 		</div>
 	</div>
 	<div class="row">
 		<div id="features">
-			<h3>網站開發</h3>
+			<h3>Web Development</h3>
 			<ul class="no-bullet">
-				<li><i class="fa fa-code fa-lg"></i>&nbsp;HTML、CSS、SASS</li>
-				<li><i class="fa fa-code fa-lg"></i>&nbsp;Foundation Front-End Framework</li>
-				<li><i class="fa fa-code fa-lg"></i>&nbsp;Javascript、jQuery</li>
-				<li><i class="fa fa-code fa-lg"></i>&nbsp;Ruby on Rails</li>
+				<li><i class="fa fa-code fa-lg"></i>&nbsp;HTML、CSS、SCSS</li>
+				<li><i class="fa fa-code fa-lg"></i>&nbsp;Front-End Framework:<br><span style="display: block; text-indent:28px">Foundation、Bootstrap</span></li>
+				<li><i class="fa fa-code fa-lg"></i>&nbsp;jQuery: Junior</li>
+				<li><i class="fa fa-code fa-lg"></i>&nbsp;Rails: Junior</li>
+        <li><i class="fa fa-code fa-lg"></i>&nbsp;Git flow</li></li>
 			</ul>
-			<h3>設計工具</h3>
-				<ul class="no-bullet">
-					<li><i class="fa fa-pencil"></i>&nbsp;Adobe illustrator</li>
-					<li><i class="fa fa-pencil"></i>&nbsp;iWorks</li>
-					<li><i class="fa fa-pencil"></i>&nbsp;Apple Aperture</li>
-				</ul>
 		</div>
 	</div>
 </div>
 <div class="cv show-for-large-up">
 	<%=render :partial=>'cv_partial_large'%>
 </div>
-<div class="cv-small show-for-medium-only">
-	<%=render :partial=>'cv_partial_small_medium'%>
-</div>
-<div class="cv-small show-for-small-only">
+<div class="cv-small hidden-for-large-up">
 	<%=render :partial=>'cv_partial_small_medium'%>
 </div>
 <div class="project">
-	<div class="row">
-		<div class="project-title">
-			<h1>從專案開始的學習歷程</h1>
-		</div>
-	</div>
-	<div class="row">
-		<div class="project-intro">
-			<h6 class="right">大學時，我在教授的指導下，多次獲得政府補助執行跨國專案，包括以「高雄都市再造」為題的「港都的奇幻旅程-雪梨參訪計劃」和以「社會企業」為題的「The Big Venture-倫敦社會企業參訪計劃」，並在商業個案競賽、創業競賽上屢獲佳績。
-			</h6>
-			<h6>我擅長團隊合作，善於溝通，並關心每個人的想法是我的最大的優點，幫助團隊克服在構想、企劃、執行上遇到的困難，讓團隊重新專注並順利達成目標。
-			</h6>
-			<ul class="orbit-slider" data-orbit data-options="bullets:false;">
-              <li data-orbit-slide="headline-1">
-                  	<img src="<%=asset_path ('1.jpg')%>">
-                  	<div class="orbit-caption">
-                    	<h3>2009年青年國際參與⾏動：<br/>港都的奇幻旅程—雪梨參訪計劃</h3>
-                  </div>
-                </li>
-                <li data-orbit-slide="headline-2">
-                    <img src="<%=asset_path ('2.jpg')%>">
-                    <div class="orbit-caption">
-                    	<h3>武漢大學康騰國際商業個案競賽：<br/>2010年冠軍</h3>
-                  </div>
-                </li>
-                <li data-orbit-slide="headline-3">
-                    <img src="<%=asset_path ('3.jpg')%>">
-                    <div class="orbit-caption">
-                    	<h3>2011新光盃<br>次世代網路青年創業競賽：亞軍</h3>
-                  </div>
-                </li>
-                <li data-orbit-slide="headline-4">
-                    <img src="<%=asset_path ('4.jpg')%>">
-                    <div class="orbit-caption">
-                    <h3>2011年青年國際參與⾏動：<br/>The Big Venture 倫敦社會企業參訪</h3>
-                  </div>
-                </li>
-                <li data-orbit-slide="headline-5">
-                    <img src="<%=asset_path ('5.jpg')%>">
-                    <div class="orbit-caption">
-                    <h3>2011年青年國際參與⾏動：<br/>The Big Venture 倫敦社會企業參訪</h3>
-                  </div>
-                </li>
-			</ul>
-		</div>
+	<div class="project-intro">
+    <h1><%= t(:project_man) %></h1>
+		<h6 class="right"><%= t(:project_story_1) %></h6>
+		<h6><%= t(:project_story_2) %></h6>
+		<ul class="orbit-slider" data-orbit data-options="bullets:false;">
+      <li data-orbit-slide="headline-1">
+          	<img src="<%=asset_path ('1.jpg')%>">
+          	<div class="orbit-caption">
+            	<h3><%= t(:photo_1_t) %><br/><%= t(:photo_1_d) %></h3>
+          </div>
+        </li>
+        <li data-orbit-slide="headline-2">
+            <img src="<%=asset_path ('2.jpg')%>">
+            <div class="orbit-caption">
+            	<h3><%= t(:photo_2_t) %><br/><%= t(:photo_2_d) %></h3>
+          </div>
+        </li>
+        <li data-orbit-slide="headline-3">
+            <img src="<%=asset_path ('3.jpg')%>">
+            <div class="orbit-caption">
+            	<h3><%= t(:photo_3_t) %>
+              <br><%= t(:photo_3_d) %></h3>
+          </div>
+        </li>
+        <li data-orbit-slide="headline-4">
+            <img src="<%=asset_path ('4.jpg')%>">
+            <div class="orbit-caption">
+            <h3><%= t(:photo_4_t) %><br/><%= t(:photo_4_d) %></h3>
+          </div>
+        </li>
+        <li data-orbit-slide="headline-5">
+            <img src="<%=asset_path ('5.jpg')%>">
+            <div class="orbit-caption">
+            <h3><%= t(:photo_5_t) %><br/><%= t(:photo_5_d) %></h3>
+          </div>
+        </li>
+		</ul>
 	</div>
 </div>
 <div class="coding">
 	<div class="row">
-		<h1 id="coding-title">從零開始，我的程式之路</h1>
+		<h1 id="coding-title"><%= t('coding_from_zero') %></h1>
 	</div>
 	<div class="row">
 		<div id="coding-intro">
-			<p>⼤四時，我和夥伴共同開發了—「WanderWorld地球漫遊」旅行社群服務，提供旅⾏者⼀個結合地圖、時間軸和行程，清楚呈現表現旅行故事的遊記平台。</p>
-			<p>開發服務的過程中，我擔任專案管理和UX Designer。這是我第⼀次進⾏Web App開發、第⼀次擔任設計師、第⼀次真正撰寫HTML、CSS、Javascript；許許多多的第⼀次，讓我⼀邊前進，⼀邊不斷充實⾃己的眼界和能力。最重要的是，創業經歷讓我更加確信，我對於「透過網路創新服務來改善⼈們生活」的熱情，是真切⽽無可取代的。</p>
-			<p>⾯對這個時代最重要的變⾰，不斷應用學習到的技能，繼續學習新知，這就是創業所帶給我的最⼤收獲。現在的我正在持續精進Ruby on Rails的開發技術，我深信有了基礎創業經驗和技術的我，將能夠在貴公司中貢獻所長。</p>
+			<p><%= t(:coding_story_1) %></p>
+			<p><%= t(:coding_story_2) %></p>
 			<div class="portofolio pulse" id="wanderworld">
 				<a href="http://www.wanderworld.com.tw" target="blank">
 					<img src="<%=asset_path('wanderworld.png')%>">
@@ -99,11 +83,11 @@
 </div>
 <div class="travel-experience show-for-medium-up">
 	<div class="row">
-		<h1>我的旅程</h1>
+		<h1><%= t(:journeys_title) %></h1>
 	</div>
 	<div class="row">
 		<div>
-			<h6>大學四年來，我藉著跨國專案的機會，分別走訪了澳洲、中國和英國，豐富了我的世界觀，也成為我開發 WanderWorld地球漫遊的靈感。</h6>
+			<h6><%= t(:travel_story) %></h6>
 		</div>
 	</div>
 	<div id="wanderworld-embed">
@@ -113,7 +97,7 @@
 <div class="contact">
 	<div class="row">
 		<div class="contact-title">
-			<h1>歡迎聯絡我！</h1>
+			<h1><%= t(:contact_me) %></h1>
 		</div>
 	</div>
 	<div class="row">
@@ -122,7 +106,7 @@
 		</div>
 		<div class="contact-method">
 			<ul class="no-bullet">
-				<li><a href="mailto:jeffrey410469@gmail.com" target="blank" class="email-me-button"><i class="fa fa-envelope-o"></i>&nbsp; Email Me</a>
+				<li><a href="mailto:jeffrey410469@gmail.com" target="blank" class="email-me-button"><i class="fa fa-envelope-o"></i>&nbsp; Email</a>
 				</li>
 				<li><span class="phone-number"><i class="fa fa-mobile fa-lg"></i>&nbsp;0975-978-343</span></li>
 			</ul>
@@ -132,7 +116,9 @@
 		<h1><i class="fa fa-quote-left"></i>STAY FOCUS, MOVE FAST, BREAK THINGS<i class="fa fa-quote-right"></i></h1>
 	</div>
   <div class="set_language">
-    <%= link_to "中文", url_for(params.merge({lang: :zh})), class: "button", title: "中文" %>
-    <%= link_to "En", url_for(params.merge({lang: :en})), class: "button", title: "English"  %>
+  	<ul class="button-group">
+  		<li><%= link_to "中文", url_for(params.merge({lang: :zh})), class: "button tiny", title: "中文" %></li>
+  		<li><%= link_to "En", url_for(params.merge({lang: :en})), class: "button tiny", title: "English"  %></li>
+  	</ul>
   </div>
 </div>

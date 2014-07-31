@@ -12,64 +12,13 @@
     <script>
       $(function(){ $(document).foundation();});
     </script>
-    <script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
 
     <%= yield %>
-    <script>
-    $(document).ready(function(){
-      if (!isMobile.any()&&!isSmallerSizeWindow.smallerSizeWindow()){
-        var controller = $.superscrollorama({
-            triggerAtCenter: false,
-            playoutAnimations: true
-          });
-      };
-      controller.pin($('.cv'), 1300, {
-          anim: (new TimelineLite())
-            .append(
-              TweenMax.fromTo($('#cv-title'), 1, 
-                {css:{left: 0, top:-750}, immediateRender:true}, 
-                {css:{left:0, top: 0}}),
-              -10)
-            .append(
-              TweenMax.fromTo($('#cv-arrow'), 2, 
-                {css:{left: -1280, top:300}, immediateRender:true}, 
-                {css:{left:0, top: 300}}),
-              -9)
-            .append(
-              TweenMax.fromTo($('#09'),2,{css:{top:-100,opacity:0},immediateRender:true},{css:{opacity:1}}))
-            .append(
-              TweenMax.fromTo($('#10'),2,{css:{top:-100,opacity:0},immediateRender:true},{css:{opacity:1}}))
-            .append(
-              TweenMax.fromTo($('#11'),2,{css:{top:-100,opacity:0},immediateRender:true},{css:{opacity:1}}))
-            .append(
-              TweenMax.fromTo($('#12'),2,{css:{top:-100,opacity:0},immediateRender:true},{css:{opacity:1}}))
-            .append(
-              TweenMax.fromTo($('#13'),2,{css:{top:-100,opacity:0},immediateRender:true},{css:{opacity:1}}))
-            .append(
-              TweenMax.fromTo($('#goes_on h2'),2,{css:{top:-100,opacity:0},immediateRender:true},{css:{opacity:1}}))
-          });
-      controller.pin($('.coding'),650,{
-        anim: (new TimelineLite())
-            .append(
-              TweenMax.fromTo($('#coding-title'), 0.5, 
-                {css:{opacity:0}, immediateRender:true}, 
-                {css:{opacity:1}},1))
-            .append(
-              TweenMax.fromTo($('#coding-intro'),0.5,{css:{opacity:0}, immediateRender:true}, 
-                {css:{opacity:1}},1))
-            .append(
-              TweenMax.fromTo($('#octocard'),0.5,{css:{opacity:0}, immediateRender:true}, 
-                {css:{opacity:1}},1))
-            .append(
-              TweenMax.fromTo($('.portofolio'),0.5,{css:{opacity:0}, immediateRender:true}, 
-                {css:{opacity:1}},1))
-          })
-        });
-    </script>
+    <%= render partial: "for_scrollma" %>
     <script>
       OCTOCARD = {
       name: 'jeffrey410469',
@@ -114,10 +63,5 @@
       });
     </script>
     <script src="http://nodejs.in/octocard/bin/octocard.js"></script>
-    <script type="text/javascript">
-      window.___gcfg = {
-        lang: 'zh-TW'
-      };
-    </script>
   </body>
 </html>
