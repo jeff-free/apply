@@ -58,9 +58,6 @@ Apply::Application.configure do
   # the I18n.default_locale when a translation can not be found)
   config.i18n.fallbacks = true
 
-  #Enable modernizr.js
-  config.assets.precompile += %w( vendor/modernizr.js )
-
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
