@@ -2,53 +2,66 @@
 	<h1 id="cv-title"><%= t(:cv_title) %></h1>
 </div>
 <img src="<%=asset_path('cv_arrow.png')%>" id='cv-arrow'>
-	<div class="columns past_container">
-		<div id="09" class="large-2 columns year">
-			<h3>2009</h3>
-			<ul>
-				<li><%= t(:YIAP_1) %></li>
-			</ul>
-		</div>
-		<div id="10" class="large-2 columns year">
-			<h3>2010</h3>
-			<ul>
-				<li><%= t(:atcc) %></li>
-				<li><%= t(:wuhan_cc) %></li>
-				<li><%= t(:cf_c) %></li>
-			</ul>
-		</div>
-		<div id="11" class="large-2 columns year">
-			<h3>2011</h3>
-			<ul>
-				<li><%= t(:YIAP_2) %></li>
-				<li><%= t(:shin_kong_competition) %></li>
-			</ul>
-		</div>
-		<div id="12" class="large-2 columns year">
-			<h3>2012</h3>
-			<ul>
-				<li><%= t(:wanderworld_founder) %></li>
-			</ul>
-		</div>
-		<div id="13" class="large-2 large-pull-2 columns year">
-			<h3>2013</h3>
-			<ul>
-				<li><%= t(:veterans) %></li>
-				<li><%= t(:appworks) %></li>
-				<li><%= t(:graduation) %></li>
-			</ul>
-		</div>
+<div class="columns past_container">
+	<div id="09" class="large-2 columns year">
+		<h3>2009</h3>
+		<ul>
+			<li><%= t(:YIAP_1) %></li>
+		</ul>
 	</div>
-	<div id="14" class="column">
-		<div class="column large-9 large-push-1 year">
-			<h3>2014</h3>
-			<ul>
-				<h4><%= t(:current_title) %></h4>
-				<li>Rails 4.1</li>
-				<li>Bootstrap</li>
-				<li>Capistrano</li>
-				<li>Git flow</li>
-				<li><%= t(:gems_like) %></li>
-			</ul>
-		</div>
+	<div id="10" class="large-2 columns year">
+		<h3>2010</h3>
+		<ul>
+			<li><%= t(:atcc) %></li>
+			<li><%= t(:wuhan_cc) %></li>
+			<li><%= t(:cf_c) %></li>
+		</ul>
 	</div>
+	<div id="11" class="large-2 columns year">
+		<h3>2011</h3>
+		<ul>
+			<li><%= t(:YIAP_2) %></li>
+			<li><%= t(:shin_kong_competition) %></li>
+		</ul>
+	</div>
+	<div id="12" class="large-2 columns year">
+		<h3>2012</h3>
+		<ul>
+			<li><%= t(:wanderworld_founder) %></li>
+		</ul>
+	</div>
+	<div id="13" class="large-2 large-pull-2 columns year">
+		<h3>2013</h3>
+		<ul>
+			<li><%= t(:veterans) %></li>
+			<li><%= t(:appworks) %></li>
+			<li><%= t(:graduation) %></li>
+		</ul>
+	</div>
+</div>
+<div class="columns">
+	<div id="14" class="column large-4 year">
+		<h3>2014</h3>
+		<ul>
+			<h4><%= t(:codegreen) %></h4>
+      <%= link_to "https://progolflink.nl/", target: "blank" do %>
+        <%= image_tag 'pgl_logo.png' %>
+      <% end %>
+			<li>Rails</li>
+			<li>Bootstrap</li>
+			<li>Capistrano + Passenger</li>
+		</ul>
+	</div>
+  <div id="15" class="column large-4 large-pull-4 year">
+    <h3>2015</h3>
+    <ul>
+      <h4><%= t(:innerexile) %></h4>
+      <%= link_to "https://innerexile.com/", target: "blank" do %>
+        <%= image_tag 'innerexile_logo.png' %>
+      <% end %>
+      <li>Rails</li>
+      <li>Bootstrap</li>
+      <li>Capistrano + Passenger</li>
+    </ul>
+  </div>
+</div>

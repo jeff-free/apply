@@ -9,20 +9,18 @@
 		<div id="features">
 			<h3>Web Development</h3>
 			<ul class="no-bullet">
-				<li><i class="fa fa-code fa-lg"></i>&nbsp;HTML、CSS、SCSS</li>
-				<li><i class="fa fa-code fa-lg"></i>&nbsp;Front-End Framework:<br><span style="display: block; text-indent:28px">Foundation、Bootstrap</span></li>
-				<li><i class="fa fa-code fa-lg"></i>&nbsp;jQuery: Junior</li>
-				<li><i class="fa fa-code fa-lg"></i>&nbsp;Rails: Junior</li>
-        <li><i class="fa fa-code fa-lg"></i>&nbsp;Git flow</li></li>
+				<li><i class="fa fa-code fa-lg"></i>&nbsp;Rails: 2 years</li>
+        <li><i class="fa fa-code fa-lg"></i>&nbsp;jQuery: 2 years</li>
+        <li><i class="fa fa-code fa-lg"></i>&nbsp;Foundation、Bootstrap</li>
 			</ul>
 		</div>
 	</div>
 </div>
 <div class="cv show-for-large-up">
-	<%=render :partial=>'cv_partial_large'%>
+	<%= render 'cv_partial_large'%>
 </div>
 <div class="cv-small hidden-for-large-up">
-	<%=render :partial=>'cv_partial_small_medium'%>
+	<%= render 'cv_partial_small_medium'%>
 </div>
 <div class="project">
 	<div class="project-intro">
@@ -72,16 +70,21 @@
 		<div id="coding-intro">
 			<p><%= t(:coding_story_1) %></p>
 			<p><%= t(:coding_story_2) %></p>
-			<div class="portofolio pulse" id="wanderworld">
-				<a href="http://www.wanderworld.com.tw" target="blank">
-					<img src="<%=asset_path('wanderworld.png')%>">
-				</a>
+			<div class="portofolio pulse">
+        <%= link_to "https://progolflink.nl/", target: "blank" do %>
+          <%= image_tag 'pgl_logo.png' %>
+        <% end %>
+      </div>
+      <div class="portofolio pulse">
+        <%= link_to "https://innerexile.com/", target: "blank" do %>
+          <%= image_tag 'innerexile_logo.png' %>
+        <% end %>
 			</div>
 		</div>
 		<div id="octocard"></div>
 	</div>
 </div>
-<div class="travel-experience show-for-medium-up">
+<!-- <div class="travel-experience show-for-medium-up">
 	<div class="row">
 		<h1><%= t(:journeys_title) %></h1>
 	</div>
@@ -91,9 +94,8 @@
 		</div>
 	</div>
 	<div id="wanderworld-embed">
-		<iframe src="http://www.wanderworld.com.tw/rapid/triplist/18" style=></iframe>
 	</div>
-</div>
+</div> -->
 <div class="contact">
 	<div class="row">
 		<div class="contact-title">
