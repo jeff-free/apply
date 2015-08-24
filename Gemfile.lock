@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/alexpeattie/heroku_secrets.git
+  revision: 717af8e0acf399bc88d2c8c1a7e230023942af0f
+  specs:
+    heroku_secrets (0.0.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -128,6 +134,7 @@ DEPENDENCIES
   coffee-rails
   font-awesome-sass
   foundation-rails
+  heroku_secrets!
   jquery-rails
   pg
   rails (= 4.2.1)

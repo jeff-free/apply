@@ -10,7 +10,6 @@ end
 group :production do
   gem 'pg'
 end
-
 # Gems used only for assets and not required
 # in production environments by default.
 gem 'font-awesome-sass'
@@ -20,6 +19,7 @@ gem 'coffee-rails'
 gem 'uglifier'
 
 gem 'jquery-rails'
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
